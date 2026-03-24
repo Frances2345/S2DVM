@@ -8,6 +8,9 @@ public class AgentSimpleController : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.SetAreaCost(0, 10);
+        agent.SetAreaCost(3, 1);
+
     }
 
     
@@ -16,6 +19,8 @@ public class AgentSimpleController : MonoBehaviour
         if(Target != null)
         {
             agent.SetDestination(Target.position);
+            
+
             //agent.
 
         }
